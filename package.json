@@ -1,0 +1,23 @@
+{
+  "name": "yaml-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharathwe45/yaml-upload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharathwe45/yaml-upload/issues"
+  },
+  "homepage": "https://github.com/sharathwe45/yaml-upload#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^4.3.0",
+    "serverless-wsgi": "^1.7.2"
+  }
+}

@@ -1,0 +1,27 @@
+service: yaml-upload # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: python2.7 
+  region: us-east-2  
+  environment:
+    FUNCTION_SHIELD_TOKEN: <your token here>
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+custom:
+  wsgi:
+    app: app.app
+    packRequirements: false
+  pythonRequirements:
+    dockerizePip: non-linux  
+
+functions:
+  app:
+    handler: wsgi_handler.handler
+    timeout: 30
+    events:
+      - http:
+          path: yaml_upload
+          method: post
